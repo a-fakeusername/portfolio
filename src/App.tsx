@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Briefcase, User, FileText, Linkedin, Github, Mail, Phone, MapPin, Award, Lightbulb, Code, Users, Brain, Tv, Puzzle, Bot, BarChart2, Gamepad2, Cpu, Server, Database, Cloud, Settings, Calendar, Star, ExternalLink, ChevronsRight, ChevronsLeft, Menu, X } from 'lucide-react';
+import { Briefcase, User, FileText, Linkedin, Github, Mail, Phone, MapPin, Award, Lightbulb, Code, Users, Brain, Tv, Puzzle, Bot, BarChart2, Gamepad2, Cpu, Server, Cloud, Settings, Star, ExternalLink, ChevronsRight, Menu, X, Download } from 'lucide-react';
 
 // Tailwind CSS is assumed to be set up in your project.
 // If not, please follow the Tailwind CSS installation guide for React.
 
 const portfolioData = {
   name: "Adam Zhu",
-  tagline: "Computer Science Student | Software Developer | AI Enthusiast",
+  tagline: "Computer Science Student | Software Developer | Competitive Programmer and Mentor",
   email: "adamzhu314@gmail.com",
   phone: "469-318-1836",
   location: "Dallas, TX",
   linkedin: "https://www.linkedin.com/in/adamzhu314/",
-  github: "https://github.com/a-fakeusername", // From resume, might be a placeholder
+  github: "https://github.com/a-fakeusername",
   education: {
     degree: "Bachelor of Science, Computer Science",
     university: "The University of Texas at Austin",
@@ -20,7 +20,7 @@ const portfolioData = {
   },
   aboutMe: {
     intro: "Highly motivated and results-oriented Computer Science student at The University of Texas at Austin with a strong foundation in software development, AI, and full-stack technologies. Passionate about solving complex problems and building innovative solutions. Proven ability to lead projects, collaborate in teams, and deliver high-quality software.",
-    journey: "My fascination with technology began early, evolving from simple scripts to complex AI models and full-scale applications. I thrive on the challenge of learning new technologies and applying them to create impactful projects. Each project, from game development to AI bots, has been a stepping stone in honing my skills and broadening my perspective.",
+    journey: "My fascination with technology began early, evolving from simple Roblox games to full-scale websites. I thrive on the challenge of learning new technologies and applying them to create impactful projects. Each project, from game development to AI bots, has been a stepping stone in honing my skills and broadening my perspective.",
     passions: "Beyond coding, I'm deeply interested in competitive programming, which sharpens my algorithmic thinking. I also enjoy mentoring others in their coding journey, finding it incredibly rewarding to share knowledge and foster growth. In my free time, I explore new developments in AI and game design, always looking for the next exciting challenge.",
     aspirations: "I aim to contribute to cutting-edge technology that makes a tangible difference. Whether it's advancing AI research, developing scalable software solutions, or innovating in game development, I'm eager to apply my skills to create meaningful impact and continuously grow as a software engineer.",
   },
@@ -69,7 +69,7 @@ const portfolioData = {
       title: "Arcane Odyssey Guides",
       description: "A high-performance web application providing guides for the game Arcane Odyssey, achieving over 3 million views. Features an advanced algorithm for sorting 40 billion combinations rapidly.",
       technologies: ["React", "Tailwind CSS", "JavaScript", "Algorithm Design"],
-      link: null, // Add link if available
+      link: "https://aoguides.myalt.dev/",
       icon: <Tv className="w-8 h-8 text-teal-400" />
     },
     {
@@ -77,7 +77,7 @@ const portfolioData = {
       title: "Monkey Sense",
       description: "An interactive platform designed to enhance mental math skills, featuring a random question generator, multiplayer duels, user authentication, and a leaderboard.",
       technologies: ["Express.js", "WebSockets", "PostgreSQL", "JavaScript", "HTML/CSS"],
-      link: null,
+      link: "https://monkeysense.me",
       icon: <Brain className="w-8 h-8 text-teal-400" />
     },
     {
@@ -85,15 +85,15 @@ const portfolioData = {
       title: "Roblox Game Portfolio",
       description: "Includes titles like 'Dig To India', 'Monster Survival', and 'Cave Mining', which collectively gained 1 million visits. Focused on data-driven design and server security.",
       technologies: ["Lua", "Roblox Studio", "Server Security"],
-      link: null,
+      link: "https://www.roblox.com/games/12332996356/Dig-to-India",
       icon: <Gamepad2 className="w-8 h-8 text-teal-400" />
     },
     {
       id: 4,
       title: "Unity Game Portfolio",
-      description: "Developed multiple games including 'Geometry Battleground' and 'CogQuest'. Emphasized object-oriented programming and code reusability. Won several game jam awards.",
+      description: "Developed multiple games including 'Together in Spirit', 'The Past and the Curious', 'Geometry Battleground', 'CogQuest'. Emphasized object-oriented programming and code reusability. Won #1 People's Choice for Texas Game Jam and #1 Overall.",
       technologies: ["C#", "Unity", "OOP", "Game Design"],
-      link: null,
+      link: "https://myaltaccountsthis.itch.io/together-in-spirit",
       icon: <Puzzle className="w-8 h-8 text-teal-400" />
     },
     {
@@ -101,15 +101,15 @@ const portfolioData = {
       title: "Word Bomb AI Bot",
       description: "An AI bot capable of real-time puzzle solving for Word Bomb, utilizing Computer Vision and Tesseract OCR for high accuracy text recognition.",
       technologies: ["Python", "NumPy", "OpenCV", "Tesseract OCR", "Computer Vision"],
-      link: null,
+      link: "https://github.com/myaltaccountsthis/word-bomb-bot",
       icon: <Bot className="w-8 h-8 text-teal-400" />
     },
     {
       id: 6,
       title: "Tetris AI Bot",
-      description: "A Reinforcement Learning-based AI bot trained to play Tetris, significantly outperforming previous benchmarks. Features a Vue.js frontend and Flask backend.",
+      description: "A Reinforcement Learning-based AI bot trained to play Tetris, significantly outperforming previous benchmarks (20x). Features a Vue.js frontend and Flask backend. Trained for 400M steps, (100 hours).",
       technologies: ["Python", "PyTorch", "Reinforcement Learning", "Vue.js", "Flask"],
-      link: null,
+      link: "https://github.com/a-fakeusername/ai-tetris",
       icon: <Cpu className="w-8 h-8 text-teal-400" />
     },
     {
@@ -125,21 +125,21 @@ const portfolioData = {
       title: "LeetCode Discord Bot",
       description: "A collaborative project building a Discord bot for LeetCode users, featuring PostgreSQL caching for efficient API call management.",
       technologies: ["Python", "GraphQL", "PostgreSQL", "Matplotlib", "discord.py"],
-      link: null,
+      link: "https://github.com/myaltaccountsthis/lc-bot",
       icon: <Server className="w-8 h-8 text-teal-400" />
     },
   ],
   skills: [
-    { category: "Languages", items: ["Java", "C++", "JavaScript/TypeScript", "Python", "C#", "SQL", "Lua", "HTML/CSS", "GraphQL"], icon: <Code className="w-6 h-6 text-sky-400" /> },
+    { category: "Languages", items: ["Java", "C++", "JavaScript/TypeScript", "Python", "C#", "SQL", "Lua", "C", "HTML/CSS", "GraphQL"], icon: <Code className="w-6 h-6 text-sky-400" /> },
     { category: "Frameworks & Libraries", items: ["React", "Next.js", "Node.js", "Express.js", "Tailwind CSS", "NumPy", "Pandas", "Keras", "PyTorch", "OpenCV", ".NET"], icon: <Settings className="w-6 h-6 text-sky-400" /> },
     { category: "Tools & Platforms", items: ["Git", "GitHub", "PostgreSQL", "Unity", "Roblox Studio", "Unreal Engine", "WSL", "Agile/SCRUM", "REST APIs", "Postman", "Linux"], icon: <Cloud className="w-6 h-6 text-sky-400" /> },
     { category: "Topics & Concepts", items: ["Software Engineering", "AI", "Machine Learning", "Computer Vision", "Database Management", "Full-Stack Development", "Algorithm Design", "Game Development"], icon: <Lightbulb className="w-6 h-6 text-sky-400" /> },
   ],
   awards: [
-    { id: 1, title: "International Collegiate Programming Contest Regionals", detail: "5th place (Sponsored by Jane Street, C++)", icon: <Award className="w-6 h-6 text-amber-400" /> },
-    { id: 2, title: "Online Coding Competitions", detail: "LeetCode Guardian (top 0.5%), Codeforces Candidate Master (top 3%) (C++, Algorithms)", icon: <Star className="w-6 h-6 text-amber-400" /> },
-    { id: 3, title: "UT Dallas Battle of the Brains", detail: "1st Place Advanced Division (Sponsored by State Farm, Java)", icon: <Award className="w-6 h-6 text-amber-400" /> },
-    { id: 4, title: "UIL State - Computer Science", detail: "2x 1st Place Team, 3rd Individual (Java)", icon: <Star className="w-6 h-6 text-amber-400" /> },
+    { id: 1, title: "International Collegiate Programming Contest Regionals (Sponsored by Jane Street)", detail: "5th place (using C++)", icon: <Award className="w-6 h-6 text-amber-400" /> },
+    { id: 2, title: "Online Coding Competitions", detail: "LeetCode Guardian (top 0.5%), Codeforces Candidate Master (top 3%) (using C++, Algorithms)", icon: <Star className="w-6 h-6 text-amber-400" /> },
+    { id: 3, title: "UT Dallas Battle of the Brains (Sponsored by State Farm)", detail: "1st Place Advanced Division (using Java)", icon: <Award className="w-6 h-6 text-amber-400" /> },
+    { id: 4, title: "UIL State - Computer Science", detail: "2x 1st Place Team, 3rd Individual (using Java)", icon: <Star className="w-6 h-6 text-amber-400" /> },
     { id: 5, title: "UIL State - Number Sense", detail: "4th Place Team, 8th Individual (Mental Math)", icon: <Star className="w-6 h-6 text-amber-400" /> },
   ],
 };
@@ -460,6 +460,15 @@ const ResumePage = () => {
   return (
     <div className="animate-fadeIn container mx-auto px-4 py-8">
       <Card className="p-6 sm:p-8 md:p-10">
+        <a
+          href="/Resume.pdf" // This path points to the file in your `public` folder
+          download="AdamZhu_Resume.pdf" // This suggests a filename to the user
+          className="absolute top-4 right-4 flex items-center gap-2 bg-sky-600 text-white py-2 px-4 rounded-lg hover:bg-sky-700 transition-colors text-sm"
+        >
+          <Download className="w-4 h-4" />
+          <span>Download Resume</span>
+        </a>
+
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-slate-100">{name}</h1>
