@@ -9,5 +9,5 @@ export default defineConfig({
       "styles.css": "./styles.css",
     }
   },
-  base: "/portfolio"
+  base: "/portfolio/"
 })
