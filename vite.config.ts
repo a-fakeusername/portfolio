@@ -8,5 +8,6 @@ export default defineConfig({
     alias: {
       "styles.css": "./styles.css",
     }
-  }
+  },
+  base: "/portfolio"
 })
