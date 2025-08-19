@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Briefcase, User, FileText, Linkedin, Github, Mail, Phone, MapPin, Award, Lightbulb, Code, Users, Brain, Tv, Puzzle, Bot, BarChart2, Gamepad2, Cpu, Server, Cloud, Settings, Star, ExternalLink, ChevronsRight, Menu, X, Download } from 'lucide-react';
 
-// Tailwind CSS is assumed to be set up in your project.
-// If not, please follow the Tailwind CSS installation guide for React.
-
 const portfolioData = {
   name: "Adam Zhu",
   tagline: "Computer Science Student | Software Developer | Competitive Programmer and Mentor",
@@ -16,7 +13,7 @@ const portfolioData = {
     degree: "Bachelor of Science, Computer Science",
     university: "The University of Texas at Austin",
     gpa: "3.9/4.0",
-    graduation: "Expected Graduation - May 2028",
+    graduation: "Expected Graduation - May 2027",
   },
   aboutMe: {
     intro: "Highly motivated and results-oriented Computer Science student at The University of Texas at Austin with a strong foundation in software development, AI, and full-stack technologies. Passionate about solving complex problems and building innovative solutions. Proven ability to lead projects, collaborate in teams, and deliver high-quality software.",
@@ -28,11 +25,10 @@ const portfolioData = {
     {
       id: 1,
       role: "USA Computing Olympiad Mentor",
-      company: "Self-Employed/Volunteer",
+      company: "Breakout Mentors",
       dates: "Aug 2024 - Present",
       description: [
-        "Guided Silver students through advanced algorithmic techniques including binary search and graphs.",
-        "Improved implementation efficiency, increasing students' average coding speed for Silver problems by 20%.",
+        "Improved algorithmic intuition of Silver students, increasing average coding and debugging speed by 20% by introducing advanced algorithmic techniques including binary search and graph traversal methods."
       ],
       skills: ["C++", "Java", "Python", "Algorithms", "Mentorship"],
       icon: <Users className="w-8 h-8 text-sky-400" />
@@ -40,11 +36,11 @@ const portfolioData = {
     {
       id: 2,
       role: "Web Developer",
-      company: "Freelance/Personal Projects",
+      company: "Personal Projects",
       dates: "Mar 2023 - Jan 2025",
       description: [
-        "Engineered Arcane Odyssey Guides, surpassing 3 million views by optimizing frontend performance with React and Tailwind CSS and designing an algorithm that sorts 40 billion combinations in under 2 seconds.",
-        "Designed and developed Monkey Sense, improving students' mental math speed by 200% by building a random question generator with a multiplayer duel system, user authentication, and leaderboard database using Express.js backend, WebSockets, and PostgreSQL.",
+        "Engineered Arcane Odyssey Guides, surpassing 3 million views with an algorithm that sorts 40 billion combinations in under 2 seconds by streamlining frontend development with React and Tailwind CSS and optimizing the algorithm through fine tuning heuristics and strategic pruning.",
+        "Designed and developed Monkey Sense, improving 500+ students’ mental math speed and aptitude by 200% by building a question generator, enhanced with a multiplayer duel system using an Express.js backend, a PostgreSQL leaderboard database, and a WebSocket client-server communication system.",
       ],
       skills: ["JavaScript", "React", "Next.js", "HTML", "CSS", "Tailwind", "PostgreSQL", "Express.js", "WebSockets"],
       icon: <Code className="w-8 h-8 text-sky-400" />
@@ -52,10 +48,10 @@ const portfolioData = {
     {
       id: 3,
       role: "Roblox and Unity Game Developer",
-      company: "Freelance/Personal Projects",
+      company: "Personal Projects",
       dates: "Mar 2020 - Oct 2024",
       description: [
-        "Published three Roblox titles (Dig To India, Monster Survival, Cave Mining) amassing 1M visits and 10% 7-day retention through data-driven design and robust server security by encapsulating client-server communication.",
+        "Published three Roblox titles (Dig To India, Monster Survival, Cave Mining) amassing 1M visits and 10% 7-day retention through mathematical game design and robust server security by encapsulating API calls.",
         "Developed Geometry Battleground, CogQuest, The Past and The Curious, and Together In Spirit using Unity, implementing object-oriented methodology with a 4-tier class hierarchy, reusing over 10,000 lines of code.",
         "Achieved #1 Overall and #1 Gameplay in UT EGaDS! High Score Game Jam, #1 People's Choice and #2 Best Narrative in Texas Game Jam, and 3rd place in BPA Software Engineering.",
       ],
@@ -137,7 +133,7 @@ const portfolioData = {
   ],
   awards: [
     { id: 1, title: "International Collegiate Programming Contest Regionals (Sponsored by Jane Street)", detail: "5th place (using C++)", icon: <Award className="w-6 h-6 text-amber-400" /> },
-    { id: 2, title: "Online Coding Competitions", detail: "LeetCode Guardian (top 0.5%), Codeforces Candidate Master (top 3%) (using C++, Algorithms)", icon: <Star className="w-6 h-6 text-amber-400" /> },
+    { id: 2, title: "Programming Competition Titles", detail: "LeetCode Guardian (top 0.37%), Codeforces Candidate Master (top 2%) (using C++, Algorithms)", icon: <Star className="w-6 h-6 text-amber-400" /> },
     { id: 3, title: "UT Dallas Battle of the Brains (Sponsored by State Farm)", detail: "1st Place Advanced Division (using Java)", icon: <Award className="w-6 h-6 text-amber-400" /> },
     { id: 4, title: "UIL State - Computer Science", detail: "2x 1st Place Team, 3rd Individual (using Java)", icon: <Star className="w-6 h-6 text-amber-400" /> },
     { id: 5, title: "UIL State - Number Sense", detail: "4th Place Team, 8th Individual (Mental Math)", icon: <Star className="w-6 h-6 text-amber-400" /> },
