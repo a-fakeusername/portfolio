@@ -10,7 +10,7 @@ const portfolioData = {
   linkedin: "https://www.linkedin.com/in/adamzhu314/",
   github: "https://github.com/a-fakeusername",
   education: {
-    degree: "Bachelor of Science, Computer Science",
+    degree: "BS in Computer Science, Turing Scholars Honors Program",
     university: "The University of Texas at Austin",
     gpa: "3.9/4.0",
     graduation: "Expected Graduation - May 2027",
